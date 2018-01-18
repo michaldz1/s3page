@@ -29,7 +29,7 @@ public class GoToSiliconPageAndCheckValidationErrorTest1 {
         homePage
                 .moveToContactUsAndClickIt()
                 .moveToCommentTextFieldClickAndEnterSomeText()
-                //scrolldown wywołać w powyższej metodzie
+                //scrolldown wywołać w powyższej metodziea
                 .scrollDown();
         new ContactPage()
                 .closeCookieInfo()
