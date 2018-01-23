@@ -2,6 +2,7 @@ package utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import properties.Properties;
 import properties.PropertiesManager;
 
 public class DriverManager {
@@ -24,15 +25,9 @@ public class DriverManager {
     }
 
     private void setupDriver() {
-
         //wiecej niz jeden driver (chrome), powinno działać na propertiesach
         if (driver == null) {
-//            System.setProperty("webdriver.gecko.driver", "C:\\Users\\michald\\michalSelenium\\geckodriver.exe");
-//            PropertiesManager.setProperty("GECKO_PATH", "C:\\Users\\michald\\michalSelenium\\geckodriver.exe");
-//            PropertiesManager.setProperty();
-            System.out.print(PropertiesManager.getProperty("GECKO_PATH"));
-            System.setProperty("webdriver.gecko.driver", PropertiesManager.getProperty("GECKO_PATH"));
-
+            System.setProperty("webdriver.gecko.driver", "C:\\Users\\michald\\michalSelenium\\geckodriver.exe");
             driver = new FirefoxDriver();
         }
     }

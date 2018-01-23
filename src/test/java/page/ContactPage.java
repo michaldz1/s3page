@@ -5,6 +5,7 @@ import properties.PropertiesManager;
 import utils.DriverManager;
 import utils.WaitFor;
 import utils.Assertion;
+import properties.Properties;
 
 //Methods should return POP class
 // REad more about Page Object Pattern, find best practices and implement
@@ -47,7 +48,7 @@ public class ContactPage extends Page {
 
     public void checkValidationError() {
         Assertion
-                .IfErrorMessageAppear(By.className(PropertiesManager.getProperty("VALIDATION_ERROR")), PropertiesManager.getProperty("EXPECTED_STRING_ERROR"));
+                .IfErrorMessageAppear(Properties.VALIDATION_ERROR, Properties.EXPECTED_STRING_ERROR);
     }
 
 }

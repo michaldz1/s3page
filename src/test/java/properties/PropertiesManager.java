@@ -34,18 +34,7 @@ public class PropertiesManager {
         PropertiesManager.getInstance().loadDefaultProperties();
         return properties.getProperty(key);
     }
-//    public static void setProperty(){
-//        try (OutputStream out = new FileOutputStream("example.properties")) {
-//            properties.setProperty("name", "javaCodeGeeks");
-//            properties.setProperty("article", "JavaProperties");
-//            properties.setProperty("version", "1.0");
-//            properties.setProperty("ide", "eclipse");
-//            properties.store(out, "This is a sample for java properties");
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//    }
+
 
 
 

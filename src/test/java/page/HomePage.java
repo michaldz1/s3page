@@ -3,9 +3,11 @@ package page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
-import properties.PropertiesManager;
+import properties.Properties;
 import utils.DriverAction;
 import utils.DriverManager;
+
+import static properties.Properties.S3_URL;
 
 public class HomePage extends Page {
 
@@ -16,9 +18,7 @@ public class HomePage extends Page {
     public HomePage() {
         this.driver = DriverManager.getDriver();
         this.action = DriverAction.getAction();
-        driver.get(PropertiesManager.getProperty("S3_URL"));
-//        driver.get("https://www.s3group.com/");
-
+        driver.get(S3_URL);
     }
 
     private static final By CONTACT_US = By.xpath("//a[@class='btn btn-red btn-contact']");
