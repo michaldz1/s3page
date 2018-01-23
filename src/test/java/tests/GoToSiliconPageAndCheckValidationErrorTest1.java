@@ -30,8 +30,8 @@ public class GoToSiliconPageAndCheckValidationErrorTest1 {
                 .moveToContactUsAndClickIt()
                 .moveToCommentTextFieldClickAndEnterSomeText()
                 //scrolldown wywołać w powyższej metodziea1
-                .scrollDown();
-        new ContactPage()
+               // .scrollDown();
+      //  new ContactPage()
                 .closeCookieInfo()
                 .moveToSendButtonAndClick()
                 .checkValidationError();
