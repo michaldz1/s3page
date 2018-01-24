@@ -32,6 +32,7 @@ public class ContactPage extends Page {
     }
 
     public page.ContactPage closeCookieInfo() {
+        Page.scrollDown();
         driver
                 .findElement(CLOSE_COOKIE_ACCEPTANCE)
                 .click();
