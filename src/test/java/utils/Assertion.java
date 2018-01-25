@@ -13,10 +13,10 @@ public class Assertion {
     private Assertion() {
     }
 
-    public static void IfErrorMessageAppear(WebElement messageShown, String messageExpected) {
+    public static void IfErrorMessageAppear(By byValue, String messageExpected) {
 
-        WaitFor.webElementVisible(messageShown);
-        assertEquals(messageShown.getText(), messageExpected);
+        WaitFor.webElementVisible(DriverManager.getDriver().findElement(byValue));
+        assertEquals(DriverManager.getDriver().findElement(byValue).getText(), messageExpected);
 
     }
 }

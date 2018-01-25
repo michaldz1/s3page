@@ -18,9 +18,9 @@ public class WaitFor {
     }
 
 
-    public static void webElementVisible(WebElement webelement, int timeout) {
+    public static void webElementVisible(By byValue, int timeout) {
         wait = new WebDriverWait(DriverManager.getDriver(), timeout);
-        wait.until(ExpectedConditions.visibilityOf(webelement));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(byValue));
     }
 
 

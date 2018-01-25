@@ -49,7 +49,7 @@ public class ContactPage extends Page {
 
     public void checkValidationError() {
         Assertion
-                .IfErrorMessageAppear(validation_error, Properties.EXPECTED_STRING_ERROR);
+                .IfErrorMessageAppear(Properties.VALIDATION_ERROR, Properties.EXPECTED_STRING_ERROR);
     }
 
 }
