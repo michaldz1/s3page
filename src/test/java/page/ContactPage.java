@@ -1,14 +1,11 @@
 package page;
 
 import org.openqa.selenium.By;
-import properties.PropertiesManager;
 import utils.DriverManager;
 import utils.WaitFor;
 import utils.Assertion;
 import properties.Properties;
 
-//Methods should return POP class
-// REad more about Page Object Pattern, find best practices and implement
 // Selectors: xpath and css -> practice knwoledge:
   // S3 Group.com ->> Selectory do kurwa wszystkiego!
 
@@ -27,12 +24,13 @@ public class ContactPage extends Page {
         WaitFor.webElementVisible(COMMENT_TEXT_FIELD);
         driver
                 .findElement(COMMENT_TEXT_FIELD)
-                .sendKeys(PropertiesManager.getProperty("someText"));
+                .sendKeys(Properties.someText);
         return this;
     }
 
     public page.ContactPage closeCookieInfo() {
-        Page.scrollDown();
+
+        this.scrollDown();
         driver
                 .findElement(CLOSE_COOKIE_ACCEPTANCE)
                 .click();
