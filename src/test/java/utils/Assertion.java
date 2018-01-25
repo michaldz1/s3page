@@ -1,6 +1,7 @@
 package utils;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import static org.junit.Assert.assertEquals;
 
@@ -12,9 +13,10 @@ public class Assertion {
     private Assertion() {
     }
 
-    public static void IfErrorMessageAppear(By messageShown, String messageExpected) {
+    public static void IfErrorMessageAppear(WebElement messageShown, String messageExpected) {
+
         WaitFor.webElementVisible(messageShown);
-        assertEquals(DriverManager.getDriver().findElement(messageShown).getText(), messageExpected);
+        assertEquals(messageShown.getText(), messageExpected);
 
     }
 }
