@@ -33,6 +33,7 @@ public class GoToSiliconPageAndCheckValidationErrorTest1 {
                 .moveToSendButtonAndClick()
                 .checkValidationError();
     }
+//TODO: selectory do wszystkiego na stronie z FINDBY, proste metody do tego
 
     @After
     public void afterTest() {

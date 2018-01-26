@@ -2,6 +2,7 @@ package utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import properties.Properties;
 
 public class DriverManager {
@@ -30,7 +31,11 @@ public class DriverManager {
         if(Properties.browserType.equals(FIREFOX)) {
             if (driver == null) {
                 System.setProperty("webdriver.gecko.driver", Properties.GECKO_PATH);
-                driver=new FirefoxDriver();
+//                FirefoxProfile profile = new FirefoxProfile();
+//                profile.setPreference("network.proxy.type", 1);
+//                profile.setPreference("network.proxy.socks", "avproxy");
+//                profile.setPreference("network.proxy.socks_port", 8080);
+                driver= new FirefoxDriver();
             }
         }
         else if (Properties.browserType.equals(CHROME)){
