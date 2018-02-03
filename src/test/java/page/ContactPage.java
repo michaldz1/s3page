@@ -14,10 +14,14 @@ import org.openqa.selenium.support.PageFactory;
   // S3 Group.com ->> Selectory do kurwa wszystkiego!
 
 public class ContactPage extends Page {
-    private WebElement input_5_1;
-    private WebElement dismiss;
-    private WebElement gform_submit_button_5;
-    private WebElement validation_error;
+    @FindBy(id = "input_5_1")
+    private WebElement commentTextField;
+    @FindBy(name = "dismiss")
+    private WebElement closeCookie;
+    @FindBy(id = "gform_submit_button_5")
+    private WebElement sendButton;
+    @FindBy(id = "validation_error")
+    private WebElement blah;
 
 /*
     @FindBy (css = "ds")
@@ -32,8 +36,8 @@ public class ContactPage extends Page {
 
     //LMGTFY: WebElements - initialization, maybe think about PageFactory
     public page.ContactPage moveToCommentTextFieldClickAndEnterSomeText() {
-        WaitFor.webElementVisible(input_5_1);
-        input_5_1.
+        WaitFor.webElementVisible(commentTextField);
+        commentTextField.
                 sendKeys(Properties.someText);
         return this;
     }
@@ -41,14 +45,14 @@ public class ContactPage extends Page {
     public page.ContactPage closeCookieInfo() {
 
         this.scrollDown();
-            dismiss
+            closeCookie
                 .click();
         return this;
     }
 
     //singleton, enum singleton, singleton inner class
     public page.ContactPage moveToSendButtonAndClick() {
-        gform_submit_button_5
+        sendButton
                 .click();
         return this;
     }
