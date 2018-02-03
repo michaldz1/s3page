@@ -27,7 +27,7 @@ public class GoToSiliconPageAndCheckValidationErrorTest1 {
     public void checkValidationOnSilicon1() {
         HomePage homePage = new HomePage();
         homePage
-                .moveToContactUsAndClickIt()
+                .clickContactUs()
                 .moveToCommentTextFieldClickAndEnterSomeText()
                 .closeCookieInfo()
                 .moveToSendButtonAndClick()

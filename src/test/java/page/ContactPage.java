@@ -19,11 +19,6 @@ public class ContactPage extends Page {
     @FindBy(id = "validation_error")
     private WebElement blah;
 
-/*
-    @FindBy (css = "ds")
-    private WebElement sth;
-*/
-
 
     public ContactPage() {
         this.driver = DriverManager.getDriver();

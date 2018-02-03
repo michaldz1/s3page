@@ -20,7 +20,7 @@ public class GoToSiliconPageAndCheckValidationErrorTest2 {
     @Test
     public void checkValidationOnSilicon2() {
         HomePage homePage = new HomePage();
-        homePage.moveToContactUsAndClickIt();
+        homePage.clickContactUs();
         ContactPage contactPage = new ContactPage();
         contactPage.moveToCommentTextFieldClickAndEnterSomeText();
         contactPage.scrollDown();

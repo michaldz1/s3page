@@ -2,6 +2,7 @@ package page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utils.DriverAction;
 import utils.DriverManager;
@@ -15,17 +16,19 @@ public class HomePage extends Page {
 
     private WebDriver driver;
     private Actions action;
-    private static final By CONTACT_US = By.cssSelector("a.btn.btn-red.btn-contact");
+    @FindBy(css = "a.btn.btn-red.btn-contact")
+    private WebElement contactUs;
 
     public HomePage() {
         this.driver = DriverManager.getDriver();
         this.action = DriverAction.getAction();
+        PageFactory.initElements(driver,this);
         driver.get(S3_URL);
     }
 
-    public ContactPage moveToContactUsAndClickIt() {
-        driver.findElement(CONTACT_US).click();
-        return new ContactPage();
+    public ContactPage clickContactUs() {
+    contactUs.click();
+    return new ContactPage();
     }
 
 }
