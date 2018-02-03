@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import utils.DriverAction;
 import utils.DriverManager;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
 
 import static properties.Properties.S3_URL;
 
@@ -12,7 +15,7 @@ public class HomePage extends Page {
 
     private WebDriver driver;
     private Actions action;
-
+    private static final By CONTACT_US = By.cssSelector("a.btn.btn-red.btn-contact");
 
     public HomePage() {
         this.driver = DriverManager.getDriver();
@@ -20,13 +23,8 @@ public class HomePage extends Page {
         driver.get(S3_URL);
     }
 
-    private static final By CONTACT_US = By.xpath("//a[@class='btn btn-red btn-contact']");
-
     public ContactPage moveToContactUsAndClickIt() {
-        action
-                .moveToElement(driver.findElement(CONTACT_US))
-                .click().build()
-                .perform();
+        driver.findElement(CONTACT_US).click();
         return new ContactPage();
     }
 

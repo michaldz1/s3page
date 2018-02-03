@@ -1,7 +1,5 @@
 package page;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import utils.DriverManager;
@@ -10,8 +8,6 @@ import utils.Assertion;
 import properties.Properties;
 import org.openqa.selenium.support.PageFactory;
 
-// Selectors: xpath and css -> practice knwoledge:
-  // S3 Group.com ->> Selectory do kurwa wszystkiego!
 
 public class ContactPage extends Page {
     @FindBy(id = "input_5_1")
@@ -34,7 +30,6 @@ public class ContactPage extends Page {
         PageFactory.initElements(driver,this);
             }
 
-    //LMGTFY: WebElements - initialization, maybe think about PageFactory
     public page.ContactPage moveToCommentTextFieldClickAndEnterSomeText() {
         WaitFor.webElementVisible(commentTextField);
         commentTextField.
@@ -50,7 +45,6 @@ public class ContactPage extends Page {
         return this;
     }
 
-    //singleton, enum singleton, singleton inner class
     public page.ContactPage moveToSendButtonAndClick() {
         sendButton
                 .click();
