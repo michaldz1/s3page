@@ -17,7 +17,7 @@ public class ContactPage extends Page {
     @FindBy(id = "gform_submit_button_5")
     private WebElement sendButton;
     @FindBy(id = "validation_error")
-    private WebElement blah;
+    private WebElement validationErr;
 
 
     public ContactPage() {

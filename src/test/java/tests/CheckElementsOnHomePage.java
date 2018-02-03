@@ -4,18 +4,13 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import page.ContactPage;
 import page.HomePage;
 import utils.DriverManager;
-import properties.PropertiesManager;
-
-import java.io.IOException;
 
 /**
- * Created by michald on 17/12/2017.
+ * Created by michald on 03/02/2018.
  */
-public class GoToSiliconPageAndCheckValidationErrorTest1 {
-
+public class CheckElementsOnHomePage {
     private WebDriver driver;
 
     @Before
@@ -27,11 +22,12 @@ public class GoToSiliconPageAndCheckValidationErrorTest1 {
     public void checkValidationOnSilicon1() {
         HomePage homePage = new HomePage();
         homePage
-                .clickContactUs()
-                .moveToCommentTextFieldClickAndEnterSomeText()
-                .closeCookieInfo()
-                .moveToSendButtonAndClick()
-                .checkValidationError();
+                .clickOurBusiness()
+                .clicks3Logo()
+                .clicks3Semiconductors()
+                .goToHomePage()
+                .clicksConnectedHealth();
+
     }
 
     @After
