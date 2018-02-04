@@ -28,27 +28,37 @@ public class HomePage extends Page {
     private WebElement ourBusiness_connectedHealth;
     @FindBy(css = "li#menu-item-401")
     private WebElement careers;
-    @FindBy(css = "ls#menu-item-444")
+    @FindBy(css = "li#menu-item-444")
     private WebElement careers_vacancies;
     @FindBy(css = "li#menu-item-402")
     private WebElement careers_meetOurPeople;
-    @FindBy(css = "ls#menu-item-404")
+    @FindBy(css = "li#menu-item-404")
     private WebElement careers_ourRecruitmentProces;
     @FindBy(css = "li#menu-item-405")
     private WebElement careers_fAQ;
-    @FindBy(css = "ls#menu-item-403")
+    @FindBy(css = "li#menu-item-403")
     private WebElement careers_reqruitmentAgencies;
     @FindBy(css = "li#menu-item-909")
     private WebElement careers_alumni;
 
-//    newsAndEvents = #menu-item-645
-//    about = #menu-item-653
-//    about_introduction = #menu-item-649
-//    about_customers = #menu-item-644
-//    about_quality = #menu-item-409
-//    about_locations = #menu-item-635
-//    about_leadershipTeam = #menu-item-408
-//    about_investors = #menu-item-407
+    @FindBy(css = "li#menu-item-645")
+    private WebElement newsAndEvents;
+    @FindBy(css = "li#menu-item-653")
+    private WebElement about;
+    @FindBy(css = "li#menu-item-649")
+    private WebElement about_introduction;
+    @FindBy(css = "li#menu-item-644")
+    private WebElement about_customers;
+    @FindBy(css = "li#menu-item-409")
+    private WebElement about_quality;
+    @FindBy(css = "li#menu-item-635")
+    private WebElement about_locations;
+    @FindBy(css = "li#menu-item-408")
+    private WebElement about_leadershipTeam;
+    @FindBy(css = "li#menu-item-407")
+    private WebElement about_investors;
+
+
 //    contactUs = .btn btn-red btn-contact
 //    semiconductorsBanner = ??
 //    connectedHealthBanner = ??
@@ -136,6 +146,52 @@ public class HomePage extends Page {
     public HomePage clickAlumni(){
         action.moveToElement(careers).perform();
         careers_alumni.click();
+        return this;
+    }
+
+    public HomePage clickNewsAndEvents(){
+        newsAndEvents.click();
+        return this;
+    }
+
+    public HomePage clickAbout(){
+        about.click();
+        return this;
+    }
+
+    public HomePage clickIntroduction(){
+        action.moveToElement(about).perform();
+        about_introduction.click();
+        return this;
+    }
+
+    public HomePage clickCustomers(){
+        action.moveToElement(about).perform();
+        about_customers.click();
+        return this;
+    }
+
+    public HomePage clickQuality(){
+        action.moveToElement(about).perform();
+        about_quality.click();
+        return this;
+    }
+
+    public HomePage clickLocations(){
+        action.moveToElement(about).perform();
+        about_locations.click();
+        return this;
+    }
+
+    public HomePage clickLeadershipTeam(){
+        action.moveToElement(about).perform();
+        about_leadershipTeam.click();
+        return this;
+    }
+
+    public HomePage clickInvestors(){
+        action.moveToElement(about).perform();
+        about_investors.click();
         return this;
     }
 
