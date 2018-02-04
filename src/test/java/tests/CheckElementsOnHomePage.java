@@ -58,8 +58,19 @@ public class CheckElementsOnHomePage {
 //                .goToHomePage()
 //                .clickLeadershipTeam()
 //                .goToHomePage()
-                .clickInvestors()
+//                .clickInvestors()
+//                .goToHomePage()
+//                .clickSearch()
+//                .goToHomePage()
+                .clickSitemap()
+                .goToHomePage()
+                .clickLegal()
+                .goToHomePage()
+                .clickPrivacy()
                 .goToHomePage();
+//                .clickS3SemiconductorBanner()
+//                .goToHomePage()
+//                .clickConnectedHealth();
 
     }
 

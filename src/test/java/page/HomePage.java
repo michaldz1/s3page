@@ -57,16 +57,28 @@ public class HomePage extends Page {
     private WebElement about_leadershipTeam;
     @FindBy(css = "li#menu-item-407")
     private WebElement about_investors;
+    @FindBy(css = "span.hidden-xs.hidden-sm.glyphicon.glyphicon-search")
+    private WebElement search;
+    @FindBy(css = "p.title[S3 Semiconductors]")
+    private WebElement s3SemiconductorsBanner;
+    @FindBy(css = "p.title[Connected Health]")
+    private WebElement connectedHealthBanner;
+    @FindBy(css = "li#menu-item-990")
+    private WebElement sitemap;
+    @FindBy(css = "li#menu-item-1327")
+    private WebElement legal;
+    @FindBy(css = "li#menu-item-1327")
+    private WebElement privacy;
+    @FindBy(css = "span.glyphicon.glyphicon-remove-circle")
+    private WebElement close;
+//    @FindBy(css = "")
+//    private WebElement ;
 
 
-//    contactUs = .btn btn-red btn-contact
-//    semiconductorsBanner = ??
-//    connectedHealthBanner = ??
+
 //    playMovie = .icon-s3-icon-play
 //    moreButton = ??// contains("More")
-//    sitemap = #menu-item-990
-//    legal = #menu-item-1327
-//    privacy = #menu-item-1328
+
 
 
     public HomePage() {
@@ -192,6 +204,44 @@ public class HomePage extends Page {
     public HomePage clickInvestors(){
         action.moveToElement(about).perform();
         about_investors.click();
+        return this;
+    }
+
+    public HomePage clickSearch(){
+        search.click();
+        return this;
+    }
+
+    public HomePage clickS3SemiconductorBanner(){
+        s3SemiconductorsBanner.click();
+        return this;
+    }
+
+    public HomePage clickConnectedHealthBanner(){
+        connectedHealthBanner.click();
+        return this;
+    }
+
+    public HomePage clickSitemap(){
+        this.clickClose().scrollDown();
+        sitemap.click();
+        return this;
+    }
+
+    public HomePage clickLegal(){
+        this.clickClose().scrollDown();
+        legal.click();
+        return this;
+    }
+
+    public HomePage clickPrivacy(){
+        this.clickClose().scrollDown();
+        privacy.click();
+        return this;
+    }
+
+    public HomePage clickClose(){
+        close.click();
         return this;
     }
 
