@@ -26,25 +26,21 @@ public class HomePage extends Page {
     private WebElement ourBusiness_s3Semiconductors;
     @FindBy(css = "li#menu-item-779")
     private WebElement ourBusiness_connectedHealth;
-//    @FindBy(css = "")
-//    private WebElement ;
-//    @FindBy(css = "")
-//    private WebElement ;
-//    @FindBy(css = "")
-//    private WebElement ;
+    @FindBy(css = "li#menu-item-401")
+    private WebElement careers;
+    @FindBy(css = "ls#menu-item-444")
+    private WebElement careers_vacancies;
+    @FindBy(css = "li#menu-item-402")
+    private WebElement careers_meetOurPeople;
+    @FindBy(css = "ls#menu-item-404")
+    private WebElement careers_ourRecruitmentProces;
+    @FindBy(css = "li#menu-item-405")
+    private WebElement careers_fAQ;
+    @FindBy(css = "ls#menu-item-403")
+    private WebElement careers_reqruitmentAgencies;
+    @FindBy(css = "li#menu-item-909")
+    private WebElement careers_alumni;
 
-
-    //    SELECTORS:
-
-//    ourBusiness_s3Semiconductors = #menu-item-778
-//    ourBusiness_connectedHealth = #menu-item-779
-//    careers = #menu-item-401
-//    careers_vacancies = #menu-item-444
-//    careers_meetOurPeople = #menu-item-402
-//    careers_ourRecruitmentProces = #menu-item-404
-//    careers_fAQ = #menu-item-405
-//    careers_reqruitmentAgencies = #menu-item-403
-//    careers_alumni = #menu-item-909
 //    newsAndEvents = #menu-item-645
 //    about = #menu-item-653
 //    about_introduction = #menu-item-649
@@ -91,7 +87,7 @@ public class HomePage extends Page {
         return this;
     }
 
-    public HomePage clicksConnectedHealth(){
+    public HomePage clickConnectedHealth(){
         action.moveToElement(ourBusiness).perform();
         ourBusiness_connectedHealth.click();
         return this;
@@ -99,6 +95,47 @@ public class HomePage extends Page {
 
     public HomePage goToHomePage(){
         driver.get(S3_URL);
+        return this;
+    }
+
+    public HomePage clickCareers(){
+        careers.click();
+        return this;
+    }
+
+    public HomePage clickVacancies(){
+        action.moveToElement(careers).perform();
+        careers_vacancies.click();
+        return this;
+    }
+
+    public HomePage clickMeetOurPeople(){
+        action.moveToElement(careers).perform();
+        careers_meetOurPeople.click();
+        return this;
+    }
+
+    public HomePage clickOurRecruitmentProcess(){
+        action.moveToElement(careers).perform();
+        careers_ourRecruitmentProces.click();
+        return this;
+    }
+
+    public HomePage clickFaq(){
+        action.moveToElement(careers).perform();
+        careers_fAQ.click();
+        return this;
+    }
+
+    public HomePage clickRecruitmentAgencies(){
+        action.moveToElement(careers).perform();
+        careers_reqruitmentAgencies.click();
+        return this;
+    }
+
+    public HomePage clickAlumni(){
+        action.moveToElement(careers).perform();
+        careers_alumni.click();
         return this;
     }
 

@@ -22,11 +22,25 @@ public class CheckElementsOnHomePage {
     public void checkValidationOnSilicon1() {
         HomePage homePage = new HomePage();
         homePage
-                .clickOurBusiness()
-                .clicks3Logo()
-                .clicks3Semiconductors()
+//                .clickOurBusiness()
+//                .clicks3Logo()
+//                .clicks3Semiconductors()
+//                .goToHomePage()
+//                .clickConnectedHealth()
+//                .goToHomePage()
+//                .clickCareers()
+//                .goToHomePage()
+                .clickVacancies()
                 .goToHomePage()
-                .clicksConnectedHealth();
+                .clickMeetOurPeople()
+                .goToHomePage()
+                .clickOurRecruitmentProcess()
+                .goToHomePage()
+                .clickFaq()
+                .goToHomePage()
+                .clickOurRecruitmentProcess()
+                .goToHomePage()
+                .clickAlumni();
 
     }
 
