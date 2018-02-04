@@ -18,5 +18,12 @@ public class Page {
         return this;
     }
 
+    public page.Page scrollDown500() {
+
+        JavascriptExecutor js = ((JavascriptExecutor) driver);
+        js.executeScript("window.scrollTo(0, 500)");
+        return this;
+    }
+
 
 }

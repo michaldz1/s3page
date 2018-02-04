@@ -59,10 +59,6 @@ public class HomePage extends Page {
     private WebElement about_investors;
     @FindBy(css = "span.hidden-xs.hidden-sm.glyphicon.glyphicon-search")
     private WebElement search;
-    @FindBy(css = "p.title[S3 Semiconductors]")
-    private WebElement s3SemiconductorsBanner;
-    @FindBy(css = "p.title[Connected Health]")
-    private WebElement connectedHealthBanner;
     @FindBy(css = "li#menu-item-990")
     private WebElement sitemap;
     @FindBy(css = "li#menu-item-1327")
@@ -71,13 +67,14 @@ public class HomePage extends Page {
     private WebElement privacy;
     @FindBy(css = "span.glyphicon.glyphicon-remove-circle")
     private WebElement close;
-//    @FindBy(css = "")
-//    private WebElement ;
-
-
-
-//    playMovie = .icon-s3-icon-play
-//    moreButton = ??// contains("More")
+    @FindBy(css = "a.btn.btn-default")
+    private WebElement more;
+    @FindBy(css = "div.video-wrapper")
+    private WebElement videoPlay;
+    @FindBy(css = "p.title[S3 Semiconductors]")
+    private WebElement s3SemiconductorsBanner;
+    @FindBy(css = "p.title[Connected Health]")
+    private WebElement connectedHealthBanner;
 
 
 
@@ -242,6 +239,19 @@ public class HomePage extends Page {
 
     public HomePage clickClose(){
         close.click();
+        return this;
+    }
+
+
+    public HomePage clickMore(){
+        this.scrollDown500();
+        more.click();
+        return this;
+    }
+
+    public HomePage clickVideoPlay(){
+        this.scrollDown500();
+        videoPlay.click();
         return this;
     }
 
