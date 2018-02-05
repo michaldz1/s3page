@@ -68,13 +68,13 @@ public class CheckElementsOnHomePage {
 //                .goToHomePage()
 //                .clickPrivacy()
 //                .goToHomePage();
-//                    .clickMore()
-//                    .goToHomePage()
-                    .clickVideoPlay()
-                    .goToHomePage();
-//                .clickS3SemiconductorBanner()
+//                .clickMore()
 //                .goToHomePage()
-//                .clickConnectedHealth();
+//                .clickVideoPlay()
+//                .goToHomePage()
+                .clickS3SemiconductorBanner()
+                .goToHomePage()
+                .clickConnectedHealthBanner();
 
     }
 

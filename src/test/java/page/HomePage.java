@@ -71,9 +71,9 @@ public class HomePage extends Page {
     private WebElement more;
     @FindBy(css = "div.video-wrapper")
     private WebElement videoPlay;
-    @FindBy(css = "p.title[S3 Semiconductors]")
+    @FindBy(css = "p.title[innerText = S3 Semiconductors]")
     private WebElement s3SemiconductorsBanner;
-    @FindBy(css = "p.title[Connected Health]")
+    @FindBy(css = "p.title[innerText = Connected Health]")
     private WebElement connectedHealthBanner;
 
 
@@ -209,16 +209,6 @@ public class HomePage extends Page {
         return this;
     }
 
-    public HomePage clickS3SemiconductorBanner(){
-        s3SemiconductorsBanner.click();
-        return this;
-    }
-
-    public HomePage clickConnectedHealthBanner(){
-        connectedHealthBanner.click();
-        return this;
-    }
-
     public HomePage clickSitemap(){
         this.clickClose().scrollDown();
         sitemap.click();
@@ -252,6 +242,18 @@ public class HomePage extends Page {
     public HomePage clickVideoPlay(){
         this.scrollDown500();
         videoPlay.click();
+        return this;
+    }
+
+    public HomePage clickS3SemiconductorBanner(){
+        this.scrollDown500();
+        s3SemiconductorsBanner.click();
+        return this;
+    }
+
+    public HomePage clickConnectedHealthBanner(){
+        this.scrollDown500();
+        connectedHealthBanner.click();
         return this;
     }
 
