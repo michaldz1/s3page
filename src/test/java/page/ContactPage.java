@@ -20,6 +20,15 @@ public class ContactPage extends Page {
     private WebElement validationErr;
 
 
+    //Zrobic Selector dla wybotu Panstwa
+    //sibling, adjencentsibling, following sibling, parent, child, descendant  mozilla dev
+    //https://devhints.io/xpath
+
+    //wait na co możemy czekać
+    //napisać swój własny dekorator do factory
+    //architektura selenium
+
+
     public ContactPage() {
         this.driver = DriverManager.getDriver();
         PageFactory.initElements(driver,this);

@@ -40,7 +40,6 @@ public class HomePage extends Page {
     private WebElement careers_reqruitmentAgencies;
     @FindBy(css = "li#menu-item-909")
     private WebElement careers_alumni;
-
     @FindBy(css = "li#menu-item-645")
     private WebElement newsAndEvents;
     @FindBy(css = "li#menu-item-653")
