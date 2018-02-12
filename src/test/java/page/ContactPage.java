@@ -21,16 +21,10 @@ public class ContactPage extends Page {
     private WebElement validationErr;
     @FindBy(css = "div.ginput_container_select > select")
     private WebElement countrySelector;
+//    @FindBy (css = "div.ginput_container_select > select")
+//    private Select countrySelect;
 
-
-
-    //Zrobic Selector dla wybotu Panstwa - ok
-    //sibling, adjencentsibling, following sibling, parent, child, descendant  mozilla dev
-    //https://devhints.io/xpath
-
-    //wait na co możemy czekać
-    //napisać swój własny dekorator do Factory/WebElement(do checkboxa i czegoś)
-    //architektura selenium
+//Findby ma znaleźć cokolwiek np. select zamiast webelementu, child, sibling, adjescent sibling
 
 
     public ContactPage() {
