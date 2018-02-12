@@ -2,6 +2,7 @@ package page;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 import utils.DriverManager;
 import utils.WaitFor;
 import utils.Assertion;
@@ -18,14 +19,17 @@ public class ContactPage extends Page {
     private WebElement sendButton;
     @FindBy(id = "validation_error")
     private WebElement validationErr;
+    @FindBy(css = "div.ginput_container_select > select")
+    private WebElement countrySelector;
 
 
-    //Zrobic Selector dla wybotu Panstwa
+
+    //Zrobic Selector dla wybotu Panstwa - ok
     //sibling, adjencentsibling, following sibling, parent, child, descendant  mozilla dev
     //https://devhints.io/xpath
 
     //wait na co możemy czekać
-    //napisać swój własny dekorator do factory
+    //napisać swój własny dekorator do Factory/WebElement(do checkboxa i czegoś)
     //architektura selenium
 
 
@@ -52,6 +56,12 @@ public class ContactPage extends Page {
     public page.ContactPage moveToSendButtonAndClick() {
         sendButton
                 .click();
+        return this;
+    }
+
+    public page.ContactPage selectCountry(String country) {
+        Select select = new Select(countrySelector);
+        select.selectByVisibleText(country);
         return this;
     }
 

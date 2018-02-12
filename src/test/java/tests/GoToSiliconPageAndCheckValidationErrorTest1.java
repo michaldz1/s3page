@@ -30,6 +30,7 @@ public class GoToSiliconPageAndCheckValidationErrorTest1 {
                 .clickContactUs()
                 .moveToCommentTextFieldClickAndEnterSomeText()
                 .closeCookieInfo()
+                .selectCountry("Bahamas")
                 .moveToSendButtonAndClick()
                 .checkValidationError();
     }
