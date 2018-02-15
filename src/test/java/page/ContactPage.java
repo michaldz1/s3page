@@ -8,6 +8,7 @@ import utils.WaitFor;
 import utils.Assertion;
 import properties.Properties;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 
 public class ContactPage extends Page {
@@ -21,8 +22,13 @@ public class ContactPage extends Page {
     private WebElement validationErr;
     @FindBy(css = "div.ginput_container_select > select")
     private WebElement countrySelector;
-    @FindBy (css = "div.ginput_container_select > select")
-    private SelectorImpl selectorImpNew;
+    @FindBy (css = "ul.navbar-top-right [data-toggle = \"modal\"]")
+    private WebElement login;
+    @FindBy (css = "p.checkbox input[type = \"checkbox\"]")
+    private WebElement checkbox;
+//    @FindBy (css = "div.ginput_container_select > select")
+//    private SelectorImpl selectorImpNew;
+
 //    @FindBy (css = "div.ginput_container_select > select")
 //    private Select countrySelect;
 
@@ -56,10 +62,10 @@ public class ContactPage extends Page {
     }
 
     public page.ContactPage selectCountry(String country) {
-//        Select select = new Select(countrySelector);
-//        select.selectByVisibleText(country);
-        SelectorImpl select = new SelectorImpl(selectorImpNew);
-        select.countrySelect(country);
+        Select select = new Select(countrySelector);
+        select.selectByVisibleText(country);
+//        SelectorImpl select = new SelectorImpl(selectorImpNew);
+//        select.countrySelect(country);
         return this;
     }
 
@@ -67,5 +73,13 @@ public class ContactPage extends Page {
         Assertion
                 .IfErrorMessageAppear(Properties.VALIDATION_ERROR, Properties.EXPECTED_STRING_ERROR);
     }
-
+    public page.ContactPage markCheckbox() {
+        checkbox.click();
+        return this;
+    }
+    public page.ContactPage moveToLoginButtonAndClick() {
+        login
+                .click();
+        return this;
+    }
 }

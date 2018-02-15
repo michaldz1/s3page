@@ -12,9 +12,9 @@ public class SelectorImpl implements WebElement{
 private SelectorImpl countrySelector;
 private String country;
 
-    https://stackoverflow.com/questions/11642348/extend-selenium-webdriver-webelement/13769891#13769891
-    http://elisarver.com/2012/12/10/wrapping-webelement-2
-    https://stackoverflow.com/questions/11642348/extend-selenium-webdriver-webelement
+//    https://stackoverflow.com/questions/11642348/extend-selenium-webdriver-webelement/13769891#13769891
+//    http://elisarver.com/2012/12/10/wrapping-webelement-2
+//    https://stackoverflow.com/questions/11642348/extend-selenium-webdriver-webelement
     
     public void countrySelect() {
         Select select = new Select(countrySelector);
