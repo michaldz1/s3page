@@ -1,25 +1,34 @@
 package newWebEl;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
 /**
- * Created by michald on 13/02/2018.
+ * Created by michald on 15/02/2018.
  */
-public class SelectorImpl implements WebElement{
-private SelectorImpl countrySelector;
-private String country;
-//
-//    https://stackoverflow.com/questions/11642348/extend-selenium-webdriver-webelement/13769891#13769891
-//    http://elisarver.com/2012/12/10/wrapping-webelement-2
-//    https://stackoverflow.com/questions/11642348/extend-selenium-webdriver-webelement
-    
-    public void countrySelect() {
-        Select select = new Select(countrySelector);
-        select.selectByVisibleText(country);
+public class CheckboxElement implements WebElement {
+
+    private final WebElement element;
+
+    public CheckboxElement(final WebElement element) {
+        this.element = element;
     }
+
+    public void check() {
+        if (!this.isSelected()) {
+            this.click();
+        }
+    }
+
+    public void uncheck() {
+        if (this.isSelected()) {
+            this.click();
+        }
+    }
+
+
+
 
     @Override
     public void click() {

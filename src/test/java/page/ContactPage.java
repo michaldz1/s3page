@@ -1,5 +1,6 @@
 package page;
 
+import newWebEl.CheckboxElement;
 import newWebEl.SelectorImpl;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,6 +27,8 @@ public class ContactPage extends Page {
     private WebElement login;
     @FindBy (css = "p.checkbox input[type = \"checkbox\"]")
     private WebElement checkbox;
+    @FindBy (css = "p.checkbox input[type = \"checkbox\"]")
+    private CheckboxElement checkboxEl;
 //    @FindBy (css = "div.ginput_container_select > select")
 //    private SelectorImpl selectorImpNew;
 
@@ -75,6 +78,10 @@ public class ContactPage extends Page {
     }
     public page.ContactPage markCheckbox() {
         checkbox.click();
+        return this;
+    }
+    public page.ContactPage unMarkCheckbox() {
+        checkboxEl.uncheck();
         return this;
     }
     public page.ContactPage moveToLoginButtonAndClick() {

@@ -25,6 +25,7 @@ public class TurnOnCheckmark {
                 .clickContactUs()
                 .moveToLoginButtonAndClick()
                 .markCheckbox();
+//                .unMarkCheckbox();
     }
 
     @After
