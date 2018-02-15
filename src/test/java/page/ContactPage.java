@@ -1,8 +1,8 @@
 package page;
 
+import newWebEl.SelectorImpl;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
 import utils.DriverManager;
 import utils.WaitFor;
 import utils.Assertion;
@@ -21,6 +21,8 @@ public class ContactPage extends Page {
     private WebElement validationErr;
     @FindBy(css = "div.ginput_container_select > select")
     private WebElement countrySelector;
+    @FindBy (css = "div.ginput_container_select > select")
+    private SelectorImpl selectorImpNew;
 //    @FindBy (css = "div.ginput_container_select > select")
 //    private Select countrySelect;
 
@@ -54,8 +56,10 @@ public class ContactPage extends Page {
     }
 
     public page.ContactPage selectCountry(String country) {
-        Select select = new Select(countrySelector);
-        select.selectByVisibleText(country);
+//        Select select = new Select(countrySelector);
+//        select.selectByVisibleText(country);
+        SelectorImpl select = new SelectorImpl(selectorImpNew);
+        select.countrySelect(country);
         return this;
     }
 
