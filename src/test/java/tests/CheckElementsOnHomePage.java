@@ -72,9 +72,11 @@ public class CheckElementsOnHomePage {
 //                .goToHomePage()
 //                .clickVideoPlay()
 //                .goToHomePage()
-                .clickS3SemiconductorBanner()
-                .goToHomePage()
-                .clickConnectedHealthBanner();
+//                .clickS3SemiconductorBanner()
+//                .goToHomePage()
+//                .clickConnectedHealthBanner();
+                .clickLogin()
+                .markCheckbox();
 
     }
 

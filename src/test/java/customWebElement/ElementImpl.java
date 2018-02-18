@@ -1,29 +1,24 @@
-package newWebEl;
+package customWebElement;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.interactions.internal.Coordinates;
 
 import java.util.List;
 
 /**
- * Created by michald on 13/02/2018.
+ * Created by michald on 18/02/2018.
  */
-public class SelectorImpl implements WebElement{
-private SelectorImpl countrySelector;
-private String country;
-//
-//    https://stackoverflow.com/questions/11642348/extend-selenium-webdriver-webelement/13769891#13769891
-//    http://elisarver.com/2012/12/10/wrapping-webelement-2
-//    https://stackoverflow.com/questions/11642348/extend-selenium-webdriver-webelement
-    
-    public void countrySelect() {
-        Select select = new Select(countrySelector);
-        select.selectByVisibleText(country);
+public class ElementImpl implements Element {
+
+    private final WebElement element;
+
+    public ElementImpl(final WebElement element) {
+        this.element = element;
     }
 
     @Override
     public void click() {
-
+        element.click();
     }
 
     @Override
@@ -32,8 +27,8 @@ private String country;
     }
 
     @Override
-    public void sendKeys(CharSequence... charSequences) {
-
+    public void sendKeys(CharSequence... keysToSend) {
+        element.sendKeys(keysToSend);
     }
 
     @Override
@@ -105,4 +100,17 @@ private String country;
     public <X> X getScreenshotAs(OutputType<X> outputType) throws WebDriverException {
         return null;
     }
+
+    @Override
+    public Coordinates getCoordinates() {
+        return null;
+    }
+
+    @Override
+    public WebElement getWrappedElement() {
+        return null;
+    }
+
+
+
 }

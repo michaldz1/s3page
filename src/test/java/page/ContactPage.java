@@ -1,8 +1,9 @@
 package page;
 
-import newWebEl.CheckboxElement;
-import newWebEl.SelectorImpl;
+//import newWebEl.CheckboxElement;
+import customWebElement.Checkbox;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.FindBy;
 import utils.DriverManager;
 import utils.WaitFor;
@@ -14,7 +15,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class ContactPage extends Page {
     @FindBy(id = "input_5_1")
-    private WebElement commentTextField;
+    private RemoteWebElement commentTextField;
     @FindBy(name = "dismiss")
     private WebElement closeCookie;
     @FindBy(id = "gform_submit_button_5")
@@ -23,12 +24,12 @@ public class ContactPage extends Page {
     private WebElement validationErr;
     @FindBy(css = "div.ginput_container_select > select")
     private WebElement countrySelector;
-    @FindBy (css = "ul.navbar-top-right [data-toggle = \"modal\"]")
+    @FindBy (css = "[data-target=\"#user-login\"]")
     private WebElement login;
     @FindBy (css = "p.checkbox input[type = \"checkbox\"]")
-    private WebElement checkbox;
-    @FindBy (css = "p.checkbox input[type = \"checkbox\"]")
-    private CheckboxElement checkboxEl;
+    private Checkbox checkbox;
+//    @FindBy (css = "p.checkbox input[type = \"checkbox\"]")
+//    private CheckboxElement checkboxEl;
 //    @FindBy (css = "div.ginput_container_select > select")
 //    private SelectorImpl selectorImpNew;
 
@@ -80,10 +81,10 @@ public class ContactPage extends Page {
         checkbox.click();
         return this;
     }
-    public page.ContactPage unMarkCheckbox() {
-        checkboxEl.uncheck();
-        return this;
-    }
+//    public page.ContactPage unMarkCheckbox() {
+//        checkboxEl.uncheck();
+//        return this;
+//    }
     public page.ContactPage moveToLoginButtonAndClick() {
         login
                 .click();

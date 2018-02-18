@@ -1,6 +1,5 @@
 package page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -8,7 +7,7 @@ import utils.DriverAction;
 import utils.DriverManager;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+import customWebElement.Checkbox;
 
 import static properties.Properties.S3_URL;
 
@@ -74,7 +73,10 @@ public class HomePage extends Page {
     private WebElement s3SemiconductorsBanner;
     @FindBy(css = "p.title[innerText = Connected Health]")
     private WebElement connectedHealthBanner;
-
+    @FindBy(css = "[data-target=\"#user-login\"]")
+    private WebElement login;
+    @FindBy(css = "input[name=\"rememberme\"]")
+    private WebElement checkbox;
 
 
     public HomePage() {
@@ -250,9 +252,13 @@ public class HomePage extends Page {
         return this;
     }
 
-    public HomePage clickConnectedHealthBanner(){
-        this.scrollDown500();
-        connectedHealthBanner.click();
+    public HomePage clickLogin(){
+        login.click();
+        return this;
+    }
+
+    public HomePage markCheckbox(){
+        checkbox.click();
         return this;
     }
 
