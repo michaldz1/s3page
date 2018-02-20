@@ -7,7 +7,6 @@ import utils.DriverAction;
 import utils.DriverManager;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import customWebElement.Checkbox;
 
 import static properties.Properties.S3_URL;
 
