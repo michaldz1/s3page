@@ -11,7 +11,7 @@ import utils.DriverManager;
 /**
  * Created by michald on 15/02/2018.
  */
-public class TurnOnCheckmark {
+public class SelectFromDropdownList {
     private WebDriver driver;
     int s3SemiconductorsIndex = 3;
 
@@ -24,9 +24,6 @@ public class TurnOnCheckmark {
     public void checkValidationOnSilicon1() {
         HomePage homePage = new HomePage();
         homePage
-//                .clickLogin()
-//                .markCheckbox()
-//                .goToHomePage()
                 .clickVacancies();
 
         CareersPage careersPage = new CareersPage();

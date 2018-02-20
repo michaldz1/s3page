@@ -23,9 +23,7 @@ public class CareersPage {
     private DropdownListWebCom dropdownListWebCom;
 
     public page.CareersPage selectBusinessUnit(int dropdownListIndex) {
-//        Select select = new Select(dropdownListWebCom);
-//        select.selectByIndex(dropdownListIndex);
-        DropdownListWebCom.SelectFromDropDownList( dropdownListWebCom,dropdownListIndex );
+        DropdownListWebCom.SelectFromDropDownList( dropdownListWebCom, dropdownListIndex );
         return this;
     }
 
