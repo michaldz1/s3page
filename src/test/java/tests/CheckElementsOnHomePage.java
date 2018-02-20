@@ -81,8 +81,8 @@ public class CheckElementsOnHomePage {
                 .markCheckbox()
                 .goToHomePage()
                 .clickVacancies();
-        CareersPage careersPage = new CareersPage();
-        careersPage.selectBusinessUnit( "S3 Semiconductors" );
+//        CareersPage careersPage = new CareersPage();
+//        careersPage.selectBusinessUnit( "S3 Semiconductors" );
 
     }
 

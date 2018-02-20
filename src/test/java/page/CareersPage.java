@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 //import org.openqa.selenium.WebElement;
 //import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 import utils.DriverManager;
 //import utils.WaitFor;
 //import utils.Assertion;
@@ -24,7 +25,7 @@ import org.openqa.selenium.support.FindBy;
  */
 public class CareersPage {
     private WebDriver driver;
-    private CareersPage(){
+    public CareersPage(){
         this.driver = DriverManager.getDriver();
         PageFactory.initElements(new WebDriverExtensionFieldDecorator(driver), this);
     }
@@ -32,20 +33,11 @@ public class CareersPage {
     @FindBy (css = "select.form-control[id=\"business_unit\"]")
     private DropdownListWebCom dropdownListWebCom;
 
-//    @FindBy (css = "select.form-control[id=\"business_unit\"]")
-//    private DropdownList dropDownlistUnit;
-//
-//    private WebDriver driver;
-//
-//    public CareersPage() {
-//        this.driver = DriverManager.getDriver();
-//        PageFactory.initElements(driver,this);
-//    }
-//
-//    public page.CareersPage selectBusinessUnit(String businessUnit) {
-//        Select select = new Select(dropDownlistUnit);
-//        select.selectByVisibleText(businessUnit);
-//
-//        return this;
-//    }
+    public page.CareersPage selectBusinessUnit(int dropdownListIndex) {
+        Select select = new Select(dropdownListWebCom);
+        select.selectByIndex(dropdownListIndex);
+        return this;
+    }
+
+
 }
