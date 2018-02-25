@@ -8,8 +8,8 @@ package customElement;
         import org.openqa.selenium.WebElement;
 public interface SelectInput {
     boolean isMultiple();
-//    List&amp;amp;amp;amp;lt;WebElement&amp;amp;amp;amp;gt; getOptions();
-//    List&amp;amp;amp;amp;lt;WebElement&amp;amp;amp;amp;gt; getAllSelectedOptions();
+    List <WebElement> getOptions();
+    List <WebElement> getAllSelectedOptions();
     WebElement getFirstSelectedOption();
     void selectByVisibleText(String text);
     void selectByIndex(int index);

@@ -56,7 +56,8 @@ public class CustomAnnotation extends Annotations {
 
         else {
 
-            xpath = String.format(findBy.format(), xpathPrefix, findBy.param());
+//            xpath = String.format(findBy.format(), xpathPrefix, findBy.param());
+            xpath = String.format(findBy.format(), findBy.param());
 
         }
 
