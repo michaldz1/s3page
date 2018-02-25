@@ -12,9 +12,9 @@ import utils.DriverManager;
 /**
  * Created by michald on 18/02/2018.
  */
-public class CareersPage {
+public class CareersPageWebCom {
     private WebDriver driver;
-    public CareersPage(){
+    public CareersPageWebCom(){
         this.driver = DriverManager.getDriver();
         PageFactory.initElements(new WebDriverExtensionFieldDecorator(driver), this);
     }
@@ -22,7 +22,7 @@ public class CareersPage {
     @FindBy (css = "select.form-control[id=\"business_unit\"]")
     private DropdownListWebCom dropdownListWebCom;
 
-    public page.CareersPage selectBusinessUnit(int dropdownListIndex) {
+    public page.CareersPageWebCom selectBusinessUnit(int dropdownListIndex) {
         DropdownListWebCom.SelectFromDropDownList( dropdownListWebCom, dropdownListIndex );
         return this;
     }
