@@ -1,5 +1,6 @@
 package customCheckbox;
 
+import customCheckboxNewest.ElementImpl;
 import org.openqa.selenium.WebElement;
 
 /**

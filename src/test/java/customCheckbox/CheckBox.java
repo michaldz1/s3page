@@ -1,5 +1,7 @@
 package customCheckbox;
 
+import customCheckboxNewest.Element;
+
 /**
  * Created by michald on 21/02/2018.
  */

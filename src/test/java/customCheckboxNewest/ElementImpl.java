@@ -1,4 +1,4 @@
-package customCheckbox;
+package customCheckboxNewest;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.internal.Coordinates;
