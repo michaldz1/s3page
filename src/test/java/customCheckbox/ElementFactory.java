@@ -8,7 +8,7 @@ import java.lang.reflect.InvocationTargetException;
 /**
  * Created by michald on 21/02/2018.
  */
-/* Element factory for wrapped elements. */
+/* Element factory for wrapped elements.s */
 public class ElementFactory extends PageFactory {
     /* Initializes a page factory from a class with a template of Elements. */
     public static <T> T initElements(WebDriver driver, Class<T> pageClassToProxy) {
